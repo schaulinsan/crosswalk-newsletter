@@ -1,9 +1,9 @@
 {
-    "project": "hlx-email",
+    "project": "cpss-newsletter",
     "plugins": [
         {
             "id": "personalization",
-            "title": "Personalization",
+            "title": "Persomnalization",
             "environments": [
                 "edit"
             ],
