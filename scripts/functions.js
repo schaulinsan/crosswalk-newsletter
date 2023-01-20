@@ -327,17 +327,6 @@ function buildHeroBlock(main) {
   }
 }
 
-function buildIntroBlock(main) {
-  const h1 = main.firstElementChild.querySelector(':scope > h1');
-  if (h1) {
-    const textSiblings = [...main.firstElementChild.querySelectorAll(':scope > :where(p,h1,h2,h3,h4,h5,h6,ul,ol)')];
-    const placeholder = document.createElement('div');
-    h1.replaceWith(placeholder);
-    const block = buildBlock('intro', { elems: textSiblings });
-    placeholder.replaceWith(block);
-  }
-}
-
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -345,7 +334,6 @@ function buildIntroBlock(main) {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
-    buildIntroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);

@@ -3,6 +3,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     css-class: 'hero';
+
+    padding-left: 50px;
 }
 
 .mj-hero-min-height {
@@ -11,4 +13,8 @@
 
 .mj-hero-text {
     color: #fff;
+    width: 259px;
+    height: 46px;
+    text-align: left;
+    font: normal normal bold 18px/22px Adobe Clean;
 }
