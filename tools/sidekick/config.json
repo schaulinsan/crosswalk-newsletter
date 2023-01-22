@@ -27,7 +27,8 @@
             "title": "Copy E-Mail",
             "environments": [
                 "dev",
-                "preview"
+                "preview",
+                "live"
             ],
             "event": "copyHtml"
         },
@@ -36,7 +37,8 @@
             "title": "Download E-Mail",
             "environments": [
                 "dev",
-                "preview"
+                "preview",
+                "live"
             ],
             "event": "downloadHtml"
         },{
