@@ -11,7 +11,8 @@ export default function decorate(block) {
   return `
     <mj-section mj-class="mj-hero"  background-url="${img.src}"  background-size="cover">
         <mj-column width="100%">
-            <mj-section mj-class="mj-hero-content" background-color="linear-gradient(300deg,  rgba(255, 255, 255, 0) 50%, black 50%)">
+            <mj-section mj-class="mj-hero-content" background-url="${backUrl}">
+            // <mj-section mj-class="mj-hero-content" background-color="linear-gradient(300deg,  rgba(255, 255, 255, 0) 50%, black 50%)">
                 <mj-column width="100%" align="left">
                     <mj-image align="left" mj-class="mj-hero-image" src="${logoUrl}" />
                     <mj-text mj-class="mj-hero-text" width="320px">${h1.innerHTML}</mj-text>
