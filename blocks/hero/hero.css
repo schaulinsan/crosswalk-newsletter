@@ -1,7 +1,7 @@
 .mj-hero {
     position: relative;
     css-class: 'hero';
-    
+    background: linear-gradient(300deg,  rgba(255, 255, 255, 0) 50%, black 50%)
 }
 
 .mj-hero-content {
@@ -9,6 +9,7 @@
     background-size: 455px;
     background-position: left;
     background-repeat: no-repeat;
+    
 }
 
 .mj-hero-min-height {
