@@ -9,14 +9,19 @@ export default function decorate(block) {
   const logoUrl = new window.URL(`${window.hlx.codeBasePath}/icons/logo.png`, window.location.href);
 
   return `
-    <mj-section mj-class="mj-hero" background-url="${img.src}"  background-size="contains" >
-        <mj-column width="100%" align="left">
-            <mj-image padding-left="50px"   padding-top="46px" padding-bottom="80px" align="left" width="107px" src="${logoUrl}" />
-            <mj-text mj-class="mj-hero-text" width="320px">${h1.innerHTML}</mj-text>
-        </mj-column>
-        <mj-column width="0%">
-            <mj-spacer mj-class="mj-hero-min-height" />
-        </mj-column>
-    </mj-section>
+    <mj-wrapper padding-bottom="0">
+        <mj-section mj-class="mj-hero"  background-url="${img.src}" >
+            <mj-column width="100%" align="left">
+                <mj-image mj-class="mj-hero-logo" align="left" src="${logoUrl}" />
+                <mj-text  mj-class="mj-hero-text">${h1.outerHTML}</mj-text>
+            </mj-column>
+            <mj-column width="0%">
+                <mj-spacer mj-class="mj-hero-min-height" />
+            </mj-column>        
+        </mj-section>
+        <mj-section mj-class="mj-hero-violator">
+            <mj-text mj-class="mj-hero-violator-text"><b>ADOBE CONFIDENTIAL</b> FOR INTERNAL USE ONLY</mj-text>
+        </mj-section>
+    </mj-wrapper>
     `;
 }
