@@ -9,9 +9,9 @@ export default function decorate(block) {
   const logoUrl = new window.URL(`${window.hlx.codeBasePath}/icons/logo.png`, window.location.href);
 
   return `
-    <mj-section mj-class="mj-hero"  background-url="${img.src}"  background-size="cover">
+    <mj-section mj-class="mj-hero"  >
         <mj-column width="100%" align="left">
-            <mj-image padding-left="50px" align="left" mj-class="mj-hero-image" src="${logoUrl}" />
+            <mj-image padding-left="50px"   padding-top="46px" padding-bottom="80px" align="left" width="107px" src="${logoUrl}" />
             <mj-text mj-class="mj-hero-text" width="320px">${h1.innerHTML}</mj-text>
         </mj-column>
         <mj-column width="0%">
