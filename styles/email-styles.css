@@ -53,6 +53,10 @@ mj-button {
     border-bottom:0;
 }
 
+.mj-content-image {
+    padding-top:20px;
+    padding-bottom:40px;
+}
 
 .mj-content-section {
     padding-left:50px;
