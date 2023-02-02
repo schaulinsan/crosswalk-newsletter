@@ -266,14 +266,15 @@ export function decorateDefaultContent(wrapper, { textClass = '', buttonClass = 
 export async function toMjml(main) {
   const mjml2html$ = loadMjml();
   let counter = 0;
+
   const main$ = Promise.all([...main.querySelectorAll(':scope > .section')]
     .map(async (section) => {
+      counter += 1;
       const [sectionBody, sectionHead] = reduceMjml(await Promise.all([...section.children]
         .map(async (wrapper) => {
           if (wrapper.matches('.default-content-wrapper')) {
-            counter += 1;
             return Promise.resolve([`
-            <mj-section mj-class="mj-${counter === 1 ? 'first-' : ''}content-section">
+            <mj-section mj-class="${counter === 1 ? 'mj-first' : ''} mj-content-section">
               <mj-column mj-class="mj-content-column">
                 ${decorateDefaultContent(wrapper,
               { textClass: 'mj-content-text', imageClass: 'mj-content-image', buttonClass: 'mj-content-button' }
@@ -297,7 +298,7 @@ export async function toMjml(main) {
         })));
 
       return [
-        `<mj-wrapper>${sectionBody}</mj-wrapper>`,
+        `<mj-wrapper mj-class="mj-content-wrapper ${section.previousElementSibling == null ? 'mj-first' : ''} ${ section.nextElementSibling == null || (section.nextElementSibling && section.nextElementSibling.nextElementSibling == null) ? 'mj-last' : ''}">${sectionBody}</mj-wrapper>`,
         sectionHead
       ];
     }));

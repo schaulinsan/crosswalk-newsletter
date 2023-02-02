@@ -1,6 +1,5 @@
 export default function decorate(block) {
   const h1 = block.querySelector('h1');
-  const img = block.querySelector('img');
 
   // mj-hero has an issue with outlook in mode='fluid-height' https://github.com/mjmlio/mjml/issues/1253
   // the recommendation is to use a section instead

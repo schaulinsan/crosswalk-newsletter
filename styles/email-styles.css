@@ -19,6 +19,7 @@ mj-all {
 
 mj-section {
     css-class: 'section';
+    padding-bottom: 20px;
 }
 
 mj-body {
@@ -36,18 +37,30 @@ mj-button {
     padding-top: 25px;
 }
 
-mj-wrapper {
-    padding-bottom: 15px;
-    background-color: #E4E4E4;
-
+.mj-content-wrapper {
+    background-color: white;
+    padding-top:50px;
+    padding-bottom:100px;
+    border-bottom: 10px solid #eee;
 }
+.mj-first {
+    padding-top: 0px;
+    border-top:0;
+}
+
+.mj-last {
+    padding-bottom: 0px;
+    border-bottom:0;
+}
+
 
 .mj-content-section {
+    padding-left:50px;
+    padding-right:50px;
     background-color: white;
-    padding:50px 50px 100px 50px;
 }
 
-.mj-first-content-section {
-    background-color: white;
-    padding:0px 50px 100px 50px;
+.mj-content-section.first {
+
 }
+
