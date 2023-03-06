@@ -38,7 +38,8 @@ p {
 }
 
 h1 {
-    font: normal normal lighter 36px Adobe Clean;
+    font: normal normal lighter 36px/40px Adobe Clean;
+    font-weight: lighter;
     padding:0;
     margin:0;
 }
