@@ -283,6 +283,7 @@ export async function toMjml(main) {
             </mj-section>
           `]);
           }
+
           const block = wrapper.querySelector('.block');
           if (block) {
             const decorator = await loadBlock(block);

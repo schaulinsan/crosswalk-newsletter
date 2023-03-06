@@ -5,7 +5,7 @@ export default function decorate(block) {
   // the recommendation is to use a section instead
   // the 2nd column is used to give the section a min-height
 
-  const logoUrl = new window.URL(`${window.hlx.codeBasePath}/icons/logo.png`, window.location.href);
+  const logoUrl = new window.URL(`${window.hlx.codeBasePath}/icons/adobe-red.png`, window.location.href);
 
   return `
     <mj-wrapper padding-bottom="0">
