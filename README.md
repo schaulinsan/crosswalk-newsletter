@@ -1,7 +1,7 @@
 # Franklin for E-Mail Boilerplate
 
 This is a bolierplate that helps getting started with generating responsive e-mail templates with Franklin using
-[mjml](https://mjml.io).
+[mjml](https://mjml.io). The boilerplate is avaialble on https://github.com/Buuhuu/hlx-email .
 
 It in particular inherits the Authoring Experience and Developer Experience from Franklin for, the Delivery is
 signifiicantly different though. 
