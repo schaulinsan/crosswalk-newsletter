@@ -75,7 +75,7 @@ const copyHtml = () => {
 };
 
 const inline_img = (html) => {
-  var images = html.getElementsByTagName('img'); 
+  var images = html.contentDocument.getElementsByTagName('img'); 
   
   for(var i = 0; i < images.length; i++) {
     var c = document.createElement('canvas');
