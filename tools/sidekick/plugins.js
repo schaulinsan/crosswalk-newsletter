@@ -74,6 +74,20 @@ const copyHtml = () => {
     }
 };
 
+const inline_img = (html) => {
+  var images = html.getElementsByTagName('img'); 
+  
+  for(var i = 0; i < images.length; i++) {
+    var c = document.createElement('canvas');
+    var img = images[i];
+    c.height = img.naturalHeight;
+    c.width = img.naturalWidth;
+    var ctx = c.getContext('2d');
+    ctx.drawImage(img, 0, 0, c.width, c.height);
+    img.src = c.toDataURL();
+  }  
+}
+
 const downloadHtml = () => {
   const iframe = document.getElementById('__emailFrame');
     if (iframe) {
@@ -81,7 +95,8 @@ const downloadHtml = () => {
       const title = h1 ? h1.innerText : 'New E-Mail';
       const subject = `Subject: ${title}`;
       const to = 'To: noreply@adobe.com';
-      const html = iframe.srcdoc;
+      const html = inline_img(iframe.srcdoc);
+
       const fileName = title
         .replaceAll(/\W+/g, '-')
         .replaceAll(/[-]{2,}/g, '-')
@@ -118,9 +133,13 @@ const downloadHtml = () => {
     }
 }
 
-const sk = document.querySelector('helix-sidekick');
-sk.addEventListener('custom:copyHtml', copyHtml);
-sk.addEventListener('custom:downloadHtml', downloadHtml);
+
+document.addEventListener('helix-sidekick-ready', () => {
+  const sk = document.querySelector('helix-sidekick')
+  sk.addEventListener('custom:downloadHtml', downloadHtml);
+  sk.addEventListener('custom:copyHtml', copyHtml);
+}, { once: true });
+
 
 window.addEventListener('message', ({ data, origin, source }) => {
   if (data === 'mjml2html' && origin.match('localhost(:\\d+)?$|.*\\.hlx\\.(page|live)$')) {
