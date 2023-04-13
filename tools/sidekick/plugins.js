@@ -134,11 +134,10 @@ const downloadHtml = () => {
 }
 
 
-document.addEventListener('helix-sidekick-ready', () => {
-  const sk = document.querySelector('helix-sidekick')
-  sk.addEventListener('custom:downloadHtml', downloadHtml);
-  sk.addEventListener('custom:copyHtml', copyHtml);
-}, { once: true });
+
+const sk = document.querySelector('helix-sidekick')
+sk.addEventListener('custom:downloadHtml', downloadHtml);
+sk.addEventListener('custom:copyHtml', copyHtml);
 
 
 window.addEventListener('message', ({ data, origin, source }) => {
