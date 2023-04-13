@@ -86,7 +86,7 @@ const inline_img = (html) => {
     ctx.drawImage(img, 0, 0, c.width, c.height);
     img.src = c.toDataURL();
   }  
-  return html.srcdoc
+  return html.contentWindow.document.documentElement.outerHTML
 }
 
 const downloadHtml = () => {
