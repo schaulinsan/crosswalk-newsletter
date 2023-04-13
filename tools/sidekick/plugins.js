@@ -95,7 +95,7 @@ const downloadHtml = () => {
       const title = h1 ? h1.innerText : 'New E-Mail';
       const subject = `Subject: ${title}`;
       const to = 'To: noreply@adobe.com';
-      const html = inline_img(iframe.srcdoc);
+      const html = inline_img(iframe);
 
       const fileName = title
         .replaceAll(/\W+/g, '-')
