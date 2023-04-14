@@ -83,7 +83,7 @@ const inline_img = (html) => {
     c.height = img.height;
     c.width = img.width;
     var ctx = c.getContext('2d');
-    ctx.drawImage(img, 0, 0, c.width, c.height);
+    ctx.drawImage(img, 0, 0, img.width, img.height,0, 0, img.width, img.height)
     img.src = c.toDataURL();
   }  
   return html.contentWindow.document.documentElement.outerHTML
