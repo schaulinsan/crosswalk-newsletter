@@ -80,10 +80,10 @@ const inline_img = (html) => {
   for(var i = 0; i < images.length; i++) {
     var c = document.createElement('canvas');
     var img = images[i];
-    c.height = img.height;
-    c.width = img.width;
+    c.height = img.naturalHeight;
+    c.width = img.naturalWidth;
     var ctx = c.getContext('2d');
-    ctx.drawImage(img, 0, 0, img.width, img.height,0, 0, img.width, img.height)
+    ctx.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight,0, 0, img.width, img.height)
     img.src = c.toDataURL();
   }  
   return html.contentWindow.document.documentElement.outerHTML
