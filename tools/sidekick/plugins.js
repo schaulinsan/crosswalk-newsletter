@@ -87,7 +87,7 @@ const inline_img = (html) => {
     var ctx = c.getContext('2d');
     ctx.clearRect(0, 0, c.width, c.height)
     ctx.drawImage(img, 0, 0)
-    img.src = c.toDataURL();
+    img.src = c.toDataURL("image/png");
 
     // reset height and width to original value
     img.height = h 
