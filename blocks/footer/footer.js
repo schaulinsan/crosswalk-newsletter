@@ -25,7 +25,7 @@ export default async function decorate(block) {
     p.replaceWith(div);
   }
 
-  const logoUrl = new window.URL(`${window.hlx.codeBasePath}/icons/logo.png`, window.location.href);
+  const logoUrl = new window.URL(`${window.hlx.codeBasePath}/icons/logo2.png`, window.location.href);
 
   return `
     <mj-section mj-class="mj-footer"  >
