@@ -78,15 +78,26 @@ const inline_img = (html) => {
   var images = html.contentDocument.getElementsByTagName('img'); 
   
   for(var i = 0; i < images.length; i++) {
-    var c = document.createElement('canvas');
+
     var img = images[i];
+
     var h = img.height
     var w = img.width
-    c.height = img.naturalHeight;
-    c.width = img.naturalWidth;
+
+    var c = document.createElement('canvas');
+      
+    c.height = h;
+    c.width = w;
     var ctx = c.getContext('2d');
     ctx.clearRect(0, 0, c.width, c.height)
-    ctx.drawImage(img, 0, 0)
+    ctx.drawImage(img, 0, 0, c.width, c.height)
+    
+    if( img.classList.contains('video')) {
+      var controls = img.nextElementSibling;
+      ctx.drawImage(controls, 0, 0, c.width, c.height);
+      controls.remove();
+    } 
+
     img.src = c.toDataURL("image/png");
 
     // reset height and width to original value

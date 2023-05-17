@@ -1,15 +1,12 @@
-function createVideoCaption(img) {
+function createVideoControl(imgHeight, imgWidth) {
   const c = document.createElement('canvas');
   const ctx = c.getContext('2d');
 
-  c.height = img.height;
-  c.width = img.width;
+  c.height = imgHeight;
+  c.width = imgWidth;
 
   const centerX = c.width / 2;
   const centerY = c.height / 2;
-
-  // copy the image into the canvas
-  ctx.drawImage(img, 0, 0, c.width, c.height);
 
   // add a transparent gray layer
   ctx.globalAlpha = 0.4;
@@ -50,13 +47,27 @@ export default function decorate(block) {
   const img = block.querySelector('img');
   const a = block.querySelector('a');
 
-  const videoCaption = createVideoCaption(img);
+  const imgHeight = img.height;
+  const imgWidth = img.width;
 
+  const videoControlData = createVideoControl(imgHeight, imgWidth);
   return `
-  <mj-section>
-    <mj-column>
-      <mj-image mj-class="mj-video" src="${videoCaption}" href="${a.href}"/>   
-    </mj-column>
-  </mj-section>
-  `;
+    <mj-raw mj-class="mj-video" >
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;margin-top:-20px">
+        <tbody>
+          <tr>
+            <td style="padding-right:70px;padding-left:70px;width:610px;padding-bottom:40px">
+              <a href="${a.href}" target="_blank" rel="noopener noreferrer">        
+                <img src="${img.src}"  class="video" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:14px;" width="610" />   
+                <img src="${videoControlData}" class="video-control" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:14px;position:relative;margin-top:-${(610 * imgHeight) / imgWidth}px" width="610"/>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   
+    </mj-raw>
+    
+  `; 
+
 }
