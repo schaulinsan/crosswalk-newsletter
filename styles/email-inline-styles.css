@@ -35,44 +35,48 @@ div {
 
 p {
     text-align: left;
-    font: normal normal 300 18px/26px Helvetica Neue;
-    letter-spacing: 0.5px;
-    color: #2C2C2C;
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    font-weight: 350;    
+    color: rgb(80, 80, 80);
     margin-top: 0px;
     margin-bottom: 20px;
 }
 
 strong {
-    font: normal normal 400 18px/26px Helvetica Neue;
+    font: normal bold 350 15px Helvetica Neue;
+    color: rgb(80, 80, 80);
 
 }
 
 h1 {
-    font: normal normal 300 32px/36px Helvetica Neue;
+    font: normal normal 200 32px/36px Helvetica Neue;
     padding:0;
     margin:0;
 }
 
 h2 {
-    font: normal normal 300 36px/40px Helvetica Neue;
+    font: normal normal 200 36px/40px Helvetica Neue;
     line-height: 1.25;
     margin-top:60px;
     margin-bottom:20px;
 }
 
 h3 {
-    font: normal normal 300 28px/32px Helvetica Neue;
+    font: normal normal 200 28px/32px Helvetica Neue;
+    line-height: 1.2;
     margin-top:60px;
     margin-bottom:20px;
 }
 
 h4 {
-    font: normal normal 300 22px/29px Helvetica Neue;
+    font: normal normal 200 22px/29px Helvetica Neue;
     margin-bottom: 0px;
 }
 
 h5 {
-    font: normal normal 300 18px/26px Helvetica Neue;
+    font: normal normal 200 18px/26px Helvetica Neue;
 }
 
 hr {
