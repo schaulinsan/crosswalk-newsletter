@@ -12,7 +12,7 @@
 
 h1, h2, h3, h4, h5 {
     text-align: left;
-    letter-spacing: 0px;
+    letter-spacing: 0.8px;
     color: #000000;
     opacity: 1;
     margin-top:5px;
@@ -29,42 +29,50 @@ a:hover {
     text-decoration: underline;
 }
 
+div {
+    font-family: Helvetica Neue;
+}
 
 p {
     text-align: left;
-    font: normal normal normal 18px/26px Helvetica Neue;
+    font: normal normal 300 18px/26px Helvetica Neue;
+    letter-spacing: 0.5px;
     color: #2C2C2C;
     margin-top: 0px;
     margin-bottom: 20px;
 }
 
+strong {
+    font: normal normal 400 18px/26px Helvetica Neue;
+
+}
+
 h1 {
-    font: normal normal lighter 32px/36px Helvetica Neue;
-    font-weight: lighter;
+    font: normal normal 300 32px/36px Helvetica Neue;
     padding:0;
     margin:0;
 }
 
 h2 {
-    font: normal normal normal 36px/40px Helvetica Neue;
+    font: normal normal 300 36px/40px Helvetica Neue;
     line-height: 1.25;
     margin-top:60px;
     margin-bottom:20px;
 }
 
 h3 {
-    font: normal normal normal 28px/32px Helvetica Neue;
+    font: normal normal 300 28px/32px Helvetica Neue;
     margin-top:60px;
     margin-bottom:20px;
 }
 
 h4 {
-    font: normal normal bold 22px/29px Helvetica Neue;
+    font: normal normal 300 22px/29px Helvetica Neue;
     margin-bottom: 0px;
 }
 
 h5 {
-    font: normal normal bold 18px/26px Helvetica Neue;
+    font: normal normal 300 18px/26px Helvetica Neue;
 }
 
 hr {

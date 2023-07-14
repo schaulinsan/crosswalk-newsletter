@@ -26,10 +26,8 @@
 }
 
 .mj-hero-violator-text {
-    font-family: "Helvetica Neue";
+    font: normal normal 300 11px Helvetica Neue;
     letter-spacing: 0.33px;
     color: #959595;
-    text-transform: uppercase;
-    font-size: 11px;
-    
+    text-transform: uppercase;    
 }
