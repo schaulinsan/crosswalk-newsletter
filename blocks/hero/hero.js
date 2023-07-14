@@ -20,7 +20,7 @@ export default function decorate(block) {
         </mj-section>
         <mj-section mj-class="mj-hero-violator">
             <mj-column width="100%" align="left">
-                <mj-text mj-class="mj-hero-violator-text"><b>ADOBE CONFIDENTIAL</b> FOR INTERNAL USE ONLY</mj-text>
+                <mj-text mj-class="mj-hero-violator-text" style="font-family: Helvetica Neue;"><b>ADOBE CONFIDENTIAL</b> FOR INTERNAL USE ONLY</mj-text>
             </mj-column>        
         </mj-section>
     </mj-wrapper>
