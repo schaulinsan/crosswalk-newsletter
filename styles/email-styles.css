@@ -11,15 +11,15 @@
  */
 mj-all {
     padding: 0;
-    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 20px;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 mj-section {
     css-class: 'section';
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    border: 0;
+    height: 1px;    
 }
 
 mj-body {
@@ -40,9 +40,6 @@ mj-button {
 
 .mj-content-wrapper {
     background-color: white;
-    padding-top:70px;
-    padding-bottom:100px;
-    border-bottom: 10px solid #eee;
 }
 .mj-first {
     padding-top: 0px;
@@ -55,8 +52,8 @@ mj-button {
 }
 
 .mj-content-image {
-    padding-top:20px;
-    padding-bottom:40px;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
 .mj-content-section {
@@ -65,7 +62,7 @@ mj-button {
     background-color: white;
 }
 
-.mj-content-section.first {
-
+.mj-light-sky-blue {
+    background-color: rgb(248, 248, 255);
 }
 

@@ -269,12 +269,13 @@ export async function toMjml(main) {
 
   const main$ = Promise.all([...main.querySelectorAll(':scope > .section')]
     .map(async (section) => {
+      const mjc = [...section.classList].map((c) => `mj-${c}`).join(' ');
       counter += 1;
       const [sectionBody, sectionHead] = reduceMjml(await Promise.all([...section.children]
         .map(async (wrapper) => {
           if (wrapper.matches('.default-content-wrapper')) {
             return Promise.resolve([`
-            <mj-section mj-class="${counter === 1 ? 'mj-first' : ''} mj-content-section">
+            <mj-section mj-class="${counter === 1 ? 'mj-first' : ''} mj-content-section ${mjc}">
               <mj-column mj-class="mj-content-column">
                 ${decorateDefaultContent(wrapper,
               { textClass: 'mj-content-text', imageClass: 'mj-content-image', buttonClass: 'mj-content-button' }
@@ -344,48 +345,6 @@ function buildAutoBlocks(main) {
   }
 }
 
-function decoratePersonalization(main) {
-  main.querySelectorAll('em').forEach((em) => {
-    let text = em.textContent.trim();
-    let content = '';
-    let unwrap = true;
-    let match;
-
-    const transform = (expr) => {
-      if (personalizationType === 'adobe-campaign-standard') {
-        const nlExpr = `/${expr.replaceAll('.', '/')}`;
-        const name = nlExpr.split('/').pop();
-        return `<span class="acr-field nl-dce-field nl-dce-done" data-nl-expr="${nlExpr}" data-nl-type="string" data-contenteditable="false" contenteditable="false">${name}</span>`;
-      } if (personalizationType === 'adobe-campaign-classic') {
-        const nlExpr = `<%= ${expr} %>`;
-        return `<span data-nl-expr="${expr}">${nlExpr}</span>`;
-      }
-      // fallback, no pers type, don't unwrap
-      unwrap = false;
-      return expr;
-    };
-
-    // eslint-disable-next-line no-cond-assign
-    while (match = text.match(/[a-zA-Z0-9]+\.[a-zA-Z0-9.]+/)) {
-      if (match.index > 0) {
-        const fragment = text.substring(0, match.index);
-        content += fragment;
-        // unwrap only if there are only non-word characters in between the expressions
-        unwrap = unwrap && !!fragment.match(/^\W+$/);
-      }
-
-      content += transform(match[0]);
-      text = text.substring(match.index + match[0].length);
-    }
-
-    if (unwrap) {
-      em.insertAdjacentHTML('afterend', content);
-      em.remove();
-    } else {
-      em.innerHTML = content;
-    }
-  });
-}
 
 /**
  * Decorates the main element.
@@ -399,7 +358,6 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
-  decoratePersonalization(main);
 }
 
 export function init(w) {

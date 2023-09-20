@@ -29,54 +29,63 @@ a:hover {
     text-decoration: underline;
 }
 
-div {
-    font-family: Helvetica Neue;
-}
-
 p {
     text-align: left;
-    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
     font-size: 15px;
-    line-height: 1.9;
+    line-height: 26px;
+    mso-line-height-rule:exactly;
     font-weight: 350;    
     color: rgb(80, 80, 80);
     margin-top: 0px;
     margin-bottom: 20px;
 }
 
+h3 em {
+    font-size:18px;
+    font-style: unset;
+    color: rgb(90, 90, 90);
+    letter-spacing: 1px;
+}
+
 strong {
-    font: normal bold 350 15px Helvetica Neue;
+    font-size: 15px;
+    font-weight: bold;
     color: rgb(80, 80, 80);
 
 }
 
 h1 {
-    font: normal normal 200 32px/36px Helvetica Neue;
+    font-size: 32px;
     padding:0;
     margin:0;
+    line-height: 40px;
 }
 
 h2 {
-    font: normal normal 200 36px/40px Helvetica Neue;
+    font-size: 36px;
     line-height: 1.25;
-    margin-top:60px;
+    margin-top:20px;
     margin-bottom:20px;
 }
 
 h3 {
-    font: normal normal 200 28px/32px Helvetica Neue;
+    font-size: 28px;
     line-height: 1.2;
-    margin-top:60px;
+    margin-top:20px;
     margin-bottom:20px;
 }
 
 h4 {
-    font: normal normal 200 22px/29px Helvetica Neue;
-    margin-bottom: 0px;
+
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    letter-spacing: unset;
+    font-weight: normal;
 }
 
 h5 {
-    font: normal normal 200 18px/26px Helvetica Neue;
+    font-size: 18px;
 }
 
 hr {
@@ -90,7 +99,9 @@ ul {
 }
 
 ul li {
-    font: normal normal normal 18px/26px Adobe Clean;
+    font-size: 18px;
     padding-left: 0.6em;
     padding-bottom: 10px;
 }
+
+

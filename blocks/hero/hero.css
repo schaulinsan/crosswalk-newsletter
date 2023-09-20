@@ -2,7 +2,6 @@
     padding:70px 70px 13px 70px !important;
     position: relative;
     background-color: #FFF;
-
 }
 
 .mj-hero-min-height {
@@ -26,7 +25,7 @@
 }
 
 .mj-hero-violator-text {
-    font: normal normal 300 11px Helvetica Neue;
+    font-size: 11px;
     letter-spacing: 0.33px;
     color: #959595;
     text-transform: uppercase;    
