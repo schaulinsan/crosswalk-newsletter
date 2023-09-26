@@ -282,6 +282,7 @@ export async function toMjml(main) {
             )}
               </mj-column>
             </mj-section>
+            <mj-divider mj-class="mj-section-divider" border-width="1px" border-color="rgb(230,230,230)" width="30%" />
           `]);
           }
 
