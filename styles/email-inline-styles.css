@@ -100,7 +100,11 @@ ul {
 }
 
 ul li {
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 26px;
+    mso-line-height-rule:exactly;
+    font-weight: 350;    
+    color: rgb(80, 80, 80);
     padding-left: 0.6em;
     padding-bottom: 10px;
 }
