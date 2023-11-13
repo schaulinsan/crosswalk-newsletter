@@ -22,4 +22,24 @@ tr.indicator-value td {
 tr.indicator-value td sub{
     vertical-align: baseline;
     padding-left: 6px;
+    font-size: 30px;
+}
+
+
+tr.indicator-value td .trend-up {
+    vertical-align: super;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+tr.indicator-value td .trend-down {
+    font-size: 15px;
+    vertical-align: baseline;
+    padding-right: 10px;
+}
+
+tr.indicator-value td .trend-stable {
+    font-size: 15px;
+    vertical-align: top;
+    padding-right: 10px;
 }

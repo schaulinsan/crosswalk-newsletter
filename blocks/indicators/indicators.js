@@ -1,3 +1,16 @@
+function trend(t) {
+  let res = '<span ';
+  if (t === 'up') {
+    res += 'class="trend-up">\u25b2';
+  } else if (t === 'down') {
+    res += 'class="trend-down">\u25bc';
+  } else if (t === 'stable') {
+    res += 'class="trend-stable">';
+  }
+  res += '</span>';
+  return res;
+}
+
 export default function decorate(block) {
   let mjml = `
     <mj-section mj-class="mj-indicators">
@@ -18,11 +31,9 @@ export default function decorate(block) {
   mjml += '<tr class="indicator-value">';
   rows.forEach((row) => {
     const cells = [...row.children];
-    mjml += `<td>${cells[1].innerHTML}<sub>${cells[2].innerHTML}</sub></td>`;
+    mjml += `<td>${trend(cells[3].innerHTML)}${cells[1].innerHTML}<sub>${cells[2].innerHTML}</sub></td>`;
   });
   mjml += '</tr>';
-
-
 
   mjml += `
         </mj-table>
