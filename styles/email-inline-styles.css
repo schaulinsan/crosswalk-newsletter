@@ -31,10 +31,11 @@ a:hover {
 
 p {
     text-align: left;
-    font-size: 15px;
+    font-size: 14pt;
     line-height: 26px;
+    letter-spacing: 0.03em;
     mso-line-height-rule:exactly;
-    font-weight: 350;    
+    font-weight: 300;    
     color: rgb(80, 80, 80);
     margin-top: 0px;
     margin-bottom: 20px;
@@ -48,46 +49,41 @@ h3 em {
 }
 
 strong {
-    font-size: 15px;
     font-weight: bold;
     color: rgb(80, 80, 80);
 
 }
 
 h1 {
-    font-family: 'Helvetica Neue';
-    font-size: 32px;
+    font-size: 22pt;
     padding:0;
     margin:0;
     line-height: 40px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 20pt;
     line-height: 1.25;
     margin-top:20px;
     margin-bottom:20px;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 18pt;
     line-height: 1.2;
     margin-top:20px;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 h4 {
 
-    font-size: 15px;
+    font-size: 16pt;
     margin-bottom: 10px;
     margin-top: 40px;
     letter-spacing: unset;
     font-weight: normal;
 }
 
-h5 {
-    font-size: 18px;
-}
 
 hr {
     margin-top: 100px;
@@ -100,7 +96,12 @@ ul {
 }
 
 ul li {
-    font-size: 18px;
+    font-size: 14pt;
+    line-height: 26px;
+    mso-line-height-rule:exactly;
+    font-weight: 300;    
+    color: rgb(80, 80, 80);
+    margin-left: 20px;
     padding-left: 0.6em;
     padding-bottom: 10px;
 }
