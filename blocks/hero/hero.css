@@ -1,18 +1,6 @@
 .mj-hero {
-    padding:70px 20px 20px 20px !important;
-    position: relative;
+    padding:20px 20px 20px 20px;
     background-color: #FFF;
-}
-
-.mj-hero-min-height {
-    height: 75px;
-}
-
-.mj-hero-logo {
-    display: inline;
-    background:transparent;
-    width: 95px;
-    padding-bottom: 5px;
 }
 
 .mj-hero-text {
@@ -21,7 +9,7 @@
 
 .mj-hero-violator {
     float:left;
-    padding:0px 20px 60px 20px !important;
+    padding:0px 20px 20px 20px;
     background-color: white;
 }
 

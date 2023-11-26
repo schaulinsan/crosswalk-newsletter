@@ -3,6 +3,7 @@ import {
   decorateBlocks,
   decorateButtons,
   decorateIcons,
+  decorateList,
   decorateSections,
   decorateTemplateAndTheme,
   init as initLibFranklin,
@@ -18,7 +19,7 @@ const mjmlTemplate = (mjmlHead, mjmlBody, bodyCssClasses = []) => `
     <mj-head>
       ${mjmlHead}
     </mj-head>
-    <mj-body css-class="${bodyCssClasses.join(' ')}">
+    <mj-body width="800" css-class="${bodyCssClasses.join(' ')}">
       ${mjmlBody}
     </mj-body>
   </mjml>
@@ -355,6 +356,7 @@ function buildAutoBlocks(main) {
 export function decorateMain(main) {
   decorateTemplateAndTheme();
   decorateButtons(main);
+  decorateList(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
