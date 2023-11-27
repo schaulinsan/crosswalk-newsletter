@@ -10,10 +10,8 @@ export default function decorate(block) {
   return `
     <mj-wrapper padding-bottom="0">
         <mj-section mj-class="mj-hero"  >
-            <mj-column width="15%" align="left">
+            <mj-column width="100%" align="left">
                 <mj-image mj-class="mj-hero-logo" align="left" src="${logoUrl}" />
-            </mj-column>
-            <mj-column width="85%">
                 <mj-text  mj-class="mj-hero-text">${h1.outerHTML}</mj-text>
             </mj-column>
             <mj-column width="0%">
