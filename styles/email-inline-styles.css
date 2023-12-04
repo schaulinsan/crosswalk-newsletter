@@ -95,7 +95,6 @@ hr {
 }
     
 ul {
-    padding-left: 1.2em;
     list-style-position: outside;
 }
 
@@ -105,8 +104,6 @@ ul li {
     mso-line-height-rule:exactly;
     font-weight: 350;    
     color: rgb(80, 80, 80);
-    padding-left: 0.6em;
-    padding-bottom: 10px;
 }
 
 
