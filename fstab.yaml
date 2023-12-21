@@ -1,2 +1,3 @@
 mountpoints:
-  /: https://adobe.sharepoint.com/:f:/r/sites/AEMCloudPersistenceIndexing/Shared%20Documents/Newsletters?csf=1&web=1&e=XEEDqr
+# /: https://adobe.sharepoint.com/:f:/r/sites/AEMCloudPersistenceIndexing/Shared%20Documents/Newsletters?csf=1&web=1&e=XEEDqr 
+  /: https://adobe.sharepoint.com/:f:/r/sites/aem-sites-expdev/Shared%20Documents/Newsletter/Crosswalk?csf=1&web=1&e=Odcwhb
