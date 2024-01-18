@@ -12,36 +12,20 @@ function trend(t) {
 }
 
 export default function decorate(block) {
+  const rows = [...block.children];
   let mjml = `
     <mj-section mj-class="mj-indicators">
-      <mj-column>
-        <mj-table>
-`;
-  const rows = [...block.children];
-
-  // indicator name
-  mjml += '<tr class="indicator-name">';
+  `;
   rows.forEach((row) => {
+    mjml += '<mj-column mj-class="mj-indicator">';
     const cells = [...row.children];
-    mjml += `<td>${cells[0].innerHTML}</td>`;
+    mjml += `<mj-text mj-class="mj-indicator-name">${cells[0].innerHTML}</mj-text>`;
+    mjml += `<mj-text mj-class="mj-indicator-value"><span class="indication-value">${trend(cells[3].innerHTML)}${cells[1].innerHTML}<sub>${cells[2].innerHTML}</sub></span></mj-text>`;
+    mjml += '</mj-column>';
   });
-  mjml += '</tr>';
-
-  // indicator value
-  mjml += '<tr class="indicator-value">';
-  rows.forEach((row) => {
-    const cells = [...row.children];
-    mjml += `<td>${trend(cells[3].innerHTML)}${cells[1].innerHTML}<sub>${cells[2].innerHTML}</sub></td>`;
-  });
-  mjml += '</tr>';
-
   mjml += `
-        </mj-table>
-      </mj-column>
     </mj-section>
     <mj-divider mj-class="mj-section-divider" border-width="1px" border-color="rgb(230,230,230)" width="30%" />
-
-
-`;
+  `;
   return mjml;
 }
