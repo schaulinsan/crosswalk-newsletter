@@ -10,9 +10,20 @@ As E-Mail clients usually do not support Javascript the fully rendered E-Mail te
 to Copy & Paste it in their preferred Marketing Automation tool, or to directly downloaded it and send it with a local
 E-Mail client.
 
+## AEM Sites Engineering Modern Development Workflows
+
+... is using this github project for its newsletters about
+- Commerce
+- Extensibility
+- Crosswalk
+
+## Sharepoint
+
+https://adobe.sharepoint.com/sites/aem-sites-expdev ("AEM Sites Experience Development")
+
 ## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Preview: https://main--crosswalk-newsletter--schaulinsan.hlx.page/
+- Live: https://main--crosswalk-newsletter--schaulinsan.hlx.live/
 
 ## How it works
 
