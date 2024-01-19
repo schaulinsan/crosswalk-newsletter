@@ -5,40 +5,41 @@
     padding-bottom:40px;
 }
 
-
-
-tr.indicator-name td {
-    font-weight: 300;
-    text-align: center;
+.mj-indicator {
+    padding: 10px 0;
 }
 
-tr.indicator-value td {
-    text-align: center;
+.mj-indicator-name {
+    align: center;
+    font-weight: 300;
+}
+
+.mj-indicator-value {
+    align: center;
     font-size: 45px;
     font-weight: 300;
     padding: 20px 0;
 }
 
-tr.indicator-value td sub{
+.indication-value sub {
     vertical-align: baseline;
     padding-left: 6px;
     font-size: 30px;
 }
 
-
-tr.indicator-value td .trend-up {
+.indication-value .trend-up {
     vertical-align: super;
     font-size: 18px;
     padding-right: 10px;
 }
 
-tr.indicator-value td .trend-down {
+.indication-value .trend-down {
     font-size: 15px;
     vertical-align: baseline;
     padding-right: 10px;
 }
 
-tr.indicator-value td .trend-stable {
+.indication-value .trend-stable {
     font-size: 15px;
     vertical-align: top;
     padding-right: 10px;
